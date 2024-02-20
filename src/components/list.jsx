@@ -171,9 +171,9 @@ export default function ListPage() {
     */
    let work;
     if(oldText){
-        work = oldText.find(post => post.name === path.name && post.id === Number(path.id));
+        work = oldText.find(post => post.id === Number(path.id));
     } else{
-        work = text.find(post => post.name === path.name && post.id === Number(path.id));
+        work = text.find(post => post.id === Number(path.id));
     }
 
 
@@ -183,7 +183,12 @@ export default function ListPage() {
         localStorage.setItem('textHistory', JSON.stringify(oldText))
     }
     if (!work) {
-        return <h2>Работа не найдена</h2>;
+        return (
+            <div className="404">
+                <h2>Задача не найдена</h2>
+                <Link to={'/'} className='button'>Назад</Link>
+            </div>
+        )
     }
     return (
         <div className='work__detail'>

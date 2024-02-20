@@ -188,7 +188,7 @@ export default function Lists() {
                     {text.map(item => (
                         <Route 
                             key={item.id} 
-                            path={`/:id/:name`}
+                            path={'/:id/:name'}
                             element={
                                 <ListPage workId={item.id} />
                             } 
