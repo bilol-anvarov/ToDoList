@@ -184,9 +184,8 @@ export default function ListPage() {
     }
     if (!work) {
         return (
-            <div className="404">
-                <h2>Задача не найдена</h2>
-                <Link to={'/'} className='button'>Назад</Link>
+            <div className="work__detail">
+                <h1><Link to='/'><img src={arrowSvg} alt="" /></Link>Задача не найдена</h1>
             </div>
         )
     }

@@ -116,11 +116,11 @@ ul.works li .settings.show .settings-menu {
           transform: translateX(-72%) translateY(0px);
 }
 
-.work__detail .work__header h1 {
+.work__detail h1 {
   text-align: left;
   font-size: 30px;
 }
-.work__detail .work__header h1 img {
+.work__detail h1 img {
   width: 20px;
   padding: 4px;
   border: solid 1px white;
