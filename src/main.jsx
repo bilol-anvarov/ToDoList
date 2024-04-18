@@ -6,8 +6,14 @@ import './index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <App />
-    {/* Yandex.RTB  */}
-    <script>window.yaContextCb=window.yaContextCb||[]</script>
-    <script src="https://yandex.ru/ads/system/context.js" async></script>
+    {
+      window.yaContextCb.push(()=>{
+        Ya.Context.AdvManager.render({
+          "blockId": "R-A-7631070-1",
+          "type": "floorAd",
+          "platform": "touch"
+        })
+      })
+    }
   </React.StrictMode>,
 )
